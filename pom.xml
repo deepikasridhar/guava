@@ -202,6 +202,17 @@
             <argLine>-Xmx1536M -Duser.language=hi -Duser.country=IN</argLine>
           </configuration>
         </plugin>
+
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <configuration>
+              <additionalOptions>
+                <additionalOption>-Xdoclint:none</additionalOption>
+              </additionalOptions>
+            </configuration>
+          </plugin>
+
       </plugins>
     </pluginManagement>
   </build>
@@ -237,8 +248,7 @@
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
-        <version>4.12</version>
-        <scope>test</scope>
+        <version>4.13.2</version>
       </dependency>
       <dependency>
         <groupId>org.easymock</groupId>
