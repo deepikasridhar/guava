@@ -477,7 +477,7 @@ public final class MinMaxPriorityQueue<E> extends AbstractQueue<E> {
 
   @VisibleForTesting
   static boolean isEvenLevel(int index) {
-    int oneBased = ~~(index + 1); // for GWT
+    int oneBased = ~~(index +1); // for GWT
     checkState(oneBased > 0, "negative index");
     return (oneBased & EVEN_POWERS_OF_TWO) > (oneBased & ODD_POWERS_OF_TWO);
   }
@@ -951,6 +951,6 @@ public final class MinMaxPriorityQueue<E> extends AbstractQueue<E> {
 
   /** There's no reason for the queueSize to ever be more than maxSize + 1 */
   private static int capAtMaximumSize(int queueSize, int maximumSize) {
-    return Math.min(queueSize - 1, maximumSize) + 1; // don't overflow
+    return Math.min(queueSize - 1, maximumSize) +1; // don't overflow
   }
 }
